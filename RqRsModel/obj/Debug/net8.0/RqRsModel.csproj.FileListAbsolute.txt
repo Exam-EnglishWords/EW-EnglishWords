@@ -1,0 +1,11 @@
+C:\Users\valie\source\repos\EnglishWordsDEMO\RqRsModel\bin\Debug\net8.0\RqRsModel.deps.json
+C:\Users\valie\source\repos\EnglishWordsDEMO\RqRsModel\bin\Debug\net8.0\RqRsModel.dll
+C:\Users\valie\source\repos\EnglishWordsDEMO\RqRsModel\bin\Debug\net8.0\RqRsModel.pdb
+C:\Users\valie\source\repos\EnglishWordsDEMO\RqRsModel\obj\Debug\net8.0\RqRsModel.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\valie\source\repos\EnglishWordsDEMO\RqRsModel\obj\Debug\net8.0\RqRsModel.AssemblyInfoInputs.cache
+C:\Users\valie\source\repos\EnglishWordsDEMO\RqRsModel\obj\Debug\net8.0\RqRsModel.AssemblyInfo.cs
+C:\Users\valie\source\repos\EnglishWordsDEMO\RqRsModel\obj\Debug\net8.0\RqRsModel.csproj.CoreCompileInputs.cache
+C:\Users\valie\source\repos\EnglishWordsDEMO\RqRsModel\obj\Debug\net8.0\RqRsModel.dll
+C:\Users\valie\source\repos\EnglishWordsDEMO\RqRsModel\obj\Debug\net8.0\refint\RqRsModel.dll
+C:\Users\valie\source\repos\EnglishWordsDEMO\RqRsModel\obj\Debug\net8.0\RqRsModel.pdb
+C:\Users\valie\source\repos\EnglishWordsDEMO\RqRsModel\obj\Debug\net8.0\ref\RqRsModel.dll

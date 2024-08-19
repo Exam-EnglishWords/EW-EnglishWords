@@ -1,0 +1,82 @@
+﻿<Window x:Class="Client.Views.MainAppWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:vm="clr-namespace:Client.ViewModels"
+        xmlns:local="clr-namespace:Client.Views"
+        mc:Ignorable="d"
+        x:Name="MainAppWind"
+        Title="MainAppWindow" Height="650" Width="500">
+    <Window.DataContext>
+        <vm:MainAppWindowViewModel/>
+    </Window.DataContext>
+    <Grid>
+        <Grid IsEnabled="{Binding TestContent}" Visibility= "{Binding TestVisibility}">
+            <Grid.RowDefinitions>
+            <RowDefinition Height="0.7*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition/>
+            <RowDefinition Height="0.4*"/>
+            <RowDefinition Height="0.4*"/>
+            <RowDefinition Height="0.4*"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+            <Grid Grid.Row="0">
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <Label Grid.Row="0" FontSize="30" VerticalContentAlignment="Bottom" HorizontalContentAlignment="Center">
+                    Welcome to test
+                </Label>
+                <Label Grid.Row="1" FontSize="30" VerticalContentAlignment="Bottom" HorizontalContentAlignment="Center"
+   Content="{Binding Login}"></Label>
+            </Grid>
+
+            <Label Grid.Row="1" FontSize="25" VerticalContentAlignment="Bottom" HorizontalContentAlignment="Center">
+                Choose correct answear
+            </Label>
+            <TextBox Grid.Row="2" Margin="150 50 150 10" FontSize="30" 
+                     VerticalContentAlignment="Center" HorizontalContentAlignment="Center" IsReadOnly="True"
+                     Text="{Binding EngWord.EngWordLesson}"></TextBox>
+            <Viewbox Grid.Row="3" Height="30" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="50 10 10 10">
+                <RadioButton FontSize="10" Content="{Binding Answear_var1.UkrWordLesson}"
+                             IsChecked="{Binding Selected_1}" GroupName="ukrVar"></RadioButton>
+            </Viewbox>
+            <Viewbox Grid.Row="4" Height="30" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="50 10 10 10">
+                <RadioButton FontSize="10" Content="{Binding Answear_var2.UkrWordLesson}"
+                             IsChecked="{Binding Selected_2}" GroupName="ukrVar"></RadioButton>
+            </Viewbox>
+            <Viewbox Grid.Row="5" Height="30" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="50 10 10 10">
+                <RadioButton FontSize="10" Content="{Binding Answear_var3.UkrWordLesson}"
+                             IsChecked="{Binding Selected_3}" GroupName="ukrVar"></RadioButton>
+            </Viewbox>
+            <Button Margin="100 40 100 40" Grid.Row="6" FontSize="30" Command="{Binding AnswearCommand}" IsDefault="True"
+                    IsEnabled="{Binding TestContent}">Answear</Button>
+        </Grid>
+        <Grid IsEnabled="{Binding GrammaContent}" Visibility="{Binding GrammaVisibility}">
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <Label Grid.Row="0" Content="Lets start grammar practice" FontSize="30" Margin="20" VerticalContentAlignment="Center"
+                   HorizontalContentAlignment="Center"></Label>
+            <Label Grid.Row="1" Content="Enter correct translate to English" FontSize="30" Margin="20" VerticalContentAlignment="Center"
+                   HorizontalContentAlignment="Center"></Label>
+            <Label Grid.Row="3" Content="Enter correct translate" FontSize="30" Margin="20" VerticalContentAlignment="Center"
+                   HorizontalContentAlignment="Center"></Label>
+            <TextBox Grid.Row="2" Margin="30" FontSize="35" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"
+                     Text="{Binding UkrWord.UkrWordLesson}"></TextBox>
+            <TextBox Grid.Row="4" Margin="30" FontSize="35" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"
+                     Text="{Binding EngWord.EngWordLesson, UpdateSourceTrigger=PropertyChanged}" Focusable="True"></TextBox>
+            <Button Grid.Row="5" Margin="100 30 100 30" FontSize="35" Command="{Binding GramAnswearCommand}" 
+                    CommandParameter="{Binding ElementName=MainAppWind}" IsDefault="True" 
+                    IsEnabled="{Binding GrammaContent}">Answear</Button>
+        </Grid>
+    </Grid>
+</Window>

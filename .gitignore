@@ -1,0 +1,6 @@
+Server/appsettings.json
+.vs/
+Client/bin/Debug/
+Client/obj/Debug/
+Server/bin/Debug/
+Server/obj/Debug/

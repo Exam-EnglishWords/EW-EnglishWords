@@ -1,0 +1,35 @@
+﻿<Window x:Class="Client.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:vm="clr-namespace:Client.ViewModels"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Client"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="350" Width="400">
+    <Window.DataContext>
+        <vm:MainWindowViewModel/>
+    </Window.DataContext>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="0.1*"/>
+            <RowDefinition Height="0.2*"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Label Grid.Row="0" VerticalContentAlignment="Bottom" HorizontalContentAlignment="Center">Do you have account?</Label>
+        <Grid Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Button Margin="60 10 15 10"
+        Command="{Binding OpenLogPage}" CommandParameter="{Binding ElementName=Main}">Yes</Button>
+            <Button Grid.Column="1" Margin="15 10 60 10" Command="{Binding OpenRegPage}"
+        CommandParameter="{Binding ElementName=Main}">No</Button>
+        </Grid>
+        <Grid Grid.Row="3">
+            <Frame x:Name="Main"/>
+        </Grid>
+            
+    </Grid>
+</Window>
